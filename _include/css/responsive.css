@@ -176,11 +176,6 @@
 		line-height: 50px;
 	}
 	
-	#twitter-feed {
-		padding-top: 90px;
-		padding-bottom: 100px;	
-	}
-	
 	#ticker .tweet_list li {
 		font-size: 16px;
 		line-height: 24px;
@@ -330,36 +325,6 @@
 		box-sizing: border-box;	
 	}
 	
-	#social-area #social ul li:first-child,
-	#social-area #social ul li {
-		margin: 15px;
-	}
-	
-	#social-area #social ul li a {
-		width: 50px;
-		height: 50px;
-	}
-	
-	#social-area #social ul li a span {
-		font-size: 24px;
-		line-height: 50px;
-	}
-	
-	#twitter-feed {
-		padding-top: 90px;
-		padding-bottom: 100px;	
-	}
-	
-	#ticker .tweet_list li {
-		font-size: 14px;
-		line-height: 22px;
-	}
-	
-	#ticker .tweet_list .tweet_time a {
-		font-size: 12px;
-		margin-left: 3px;	
-	}
-	
 	.info-block a.button {
     	margin-top: 20px;
     	position: inherit;
@@ -380,10 +345,6 @@
 		font-size: 12px;
 	}
 	
-	#twitter-feed {
-		padding-top: 90px;
-		padding-bottom: 120px;	
-	}
 }
 
 
