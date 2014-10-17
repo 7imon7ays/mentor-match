@@ -336,7 +336,6 @@ h3.spec {
 #home-slider .control-nav {
 	position: absolute;
 	width: 100%;
-	background: #2F3238;
 	height: 50px;
 	bottom: 0;
 	z-index: 2;
@@ -410,7 +409,6 @@ h3.spec {
 }
 
 #home-slider #nextsection {
-	background-color: #26292E;
 	margin: 0;
 	position: relative;
 	float:right;
