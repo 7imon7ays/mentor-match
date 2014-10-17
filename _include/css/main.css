@@ -326,6 +326,14 @@ h3.spec {
 	text-shadow: none;	
 }
 
+#home-slider #slidecaption h1 {
+  font-size: 86px;
+}
+
+#home-slider #slidecaption p {
+  font-size: 46px;
+}
+
 #home-slider .slide-content {
 	font-size: 60px;
 	color: #FFFFFF;
@@ -618,7 +626,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 .title-page .title {
-	font-size: 48px;
+	font-size: 64px;
 	margin: 0 0 10px 0
 }
 
