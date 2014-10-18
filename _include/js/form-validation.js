@@ -17,7 +17,6 @@ $(document).ready(function() {
       });
       return true;
     } else {
-      //$ssForm.find("#testFail").removeClass('no-viz');
       $ssForm.find("#testFail").removeClass('no-viz');
       $ssForm.find("#testFailMessage").html(
         "<i class='font-icon-arrow-simple-up'></i>Enter \"" +
