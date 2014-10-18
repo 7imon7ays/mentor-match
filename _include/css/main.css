@@ -134,6 +134,10 @@ textarea::-webkit-input-placeholder {
   color: #7F8289;
 }
 
+p.light-gray {
+  color: #B8BABD;
+}
+
 /* ==================================================
    Code and Pre
 ================================================== */
