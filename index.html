@@ -52,6 +52,33 @@
 <!-- Modernizr -->
 <script src="_include/js/modernizr.js"></script>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- jQuery Core -->
+<!-- Captcha -->
+<script type='text/javascript'>//<![CDATA[
+var formID = 'ss-form';
+var formKey = '1xvDWH7xO_mZXskH8yvKeMxR0Ok6nIwwHkhEtC9QwtbI';
+var labelName = 'ssTestLabel';
+var testField = 'ssTestValue';
+var submitted = false;
+
+$(document).ready(function() {
+ var ssForm = $('#'+formID);
+
+ var randomInt = Math.floor((Math.random()*100)+1);
+ $('#'+testField).attr('placeholder', 'Type "' + randomInt + '" here.');
+  
+ ssForm.submit(function(evt){
+  if ($('#'+testField).val() == randomInt) {
+    ssForm.attr({'action' : 'https://docs.google.com/forms/d/' + formKey + '/formResponse'});
+    return true;
+  } else {
+    $("#testFail").removeClass('hidden');
+    $("#testFailMessage").html("Type " + randomInt + " in this box.");
+    return false;
+  }
+ });
+});
+//]]></script>
 </head>
 
 
@@ -147,10 +174,6 @@
         <div class="span12">
             <div class="title-page">
                 <h2 class="title">Sign Up</h2>
-                <h3 class="title-description">
-                  Submit your email address. You'll receive a short form soon.<br>
-                  Then we'll match you with a mentor or pupil.
-                </h3>
             </div>
         </div>
     </div>
@@ -159,28 +182,65 @@
     <!-- Contact Form -->
     <div class="row">
     	<div class="span12">
+        <p id="signup-instructions">
+          Submit your email address. You'll receive a short questionnaire
+          and get matched with a mentor or pupil.
+        </p>
         
-        	<form id="contact-form" class="contact-form" action="#">
-            	<p class="contact-name">
-            		<input id="contact_name" type="text" placeholder="Full Name" value="" name="name" />
-                </p>
-                <p class="contact-email">
-                	<input id="contact_email" type="text" placeholder="Email Address" value="" name="email" />
-                </p>
-                <p class="contact-message">
-                	<textarea id="contact_message" placeholder="Your Message" name="message" rows="15" cols="40"></textarea>
-                </p>
-                <p class="contact-submit">
-                	<a id="contact-submit" class="submit" href="#">Send Your Email</a>
-                </p>
-                
-                <div id="response">
-                
-                </div>
-            </form>
+        <!-- Google Form -->
+        <form action="https://docs.google.com/forms/d/1xvDWH7xO_mZXskH8yvKeMxR0Ok6nIwwHkhEtC9QwtbI/formResponse" method="POST" id="ss-form" target="#" onsubmit=""><ol role="list" class="ss-question-list" style="padding-left: 0">
+          <div class="ss-form-question errorbox-good" role="listitem">
+            <div dir="ltr" class="ss-item ss-item-required ss-text">
+              <div class="ss-form-entry">
+                <label class="ss-q-item-label" for="entry_1293676009">
+                  <div class="ss-q-title">
+                    <label for="itemView.getDomIdToLabel()" aria-label="(Required field)">
+                    </label>
+                  </div>
+                  <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+                  </label>
+                  <input type="email" name="entry.1293676009" value=""
+                  class="ss-q-short" id="entry_1293676009" dir="auto" aria-label="Email Address
+                  Invalid email" aria-required="true" required="" title="Invalid email"
+                  placeholder="Email Address">
+            </div>
+        </div>
+      </div>
+<input type="hidden" name="draftResponse" value="[,,&quot;-382510571205507086&quot;]
+">
+<input type="hidden" name="pageHistory" value="0">
+
+
+<input type="hidden" name="fbzx" value="-382510571205507086">
+
+<div class="ss-item ss-navigate">
+  <!--
+  <table id="navigation-table">
+    <tbody>
+      <tr>
+        <td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+   -->
+
+<!-- Test Label -->
+<label id="ssTestLabel" for="ssTestValue"></label>
+<input type="text" name="ssTestValue" value="" id="ssTestValue" />
+<span id="testFail" class="hidden"><p id="testFailMessage"></p></span>
+<!-- End of Test Label -->
+<div>
+<input type="submit" name="submit" value="Submit" id="ss-submit" class="jfk-button jfk-button-action ">
+</div>
+  <!--
+      </tr>
+    </tbody>
+  </table>
+  -->
+</div>
+</ol>
+</form>
+
+  <!-- End of Google Form -->
          
         </div>
-        
     </div>
     <!-- End Contact Form -->
 </div>
@@ -202,7 +262,6 @@
 
 <!-- Js -->
 <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.0.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- jQuery Core -->
 <script src="_include/js/bootstrap.min.js"></script> <!-- Bootstrap -->
 <script src="_include/js/supersized.3.2.1.js"></script> <!-- Slider -->
 <script src="_include/js/waypoints.js"></script> <!-- WayPoints -->
