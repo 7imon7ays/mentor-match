@@ -323,7 +323,7 @@ h3.spec {
 }
 
 #home-slider #slidecaption h1 {
-  font-size: 7.9vw;
+  font-size: 13vw;
 }
 
 #home-slider #slidecaption p {
@@ -670,7 +670,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 p#signup-instructions {
-  margin-left: 2%;
+  margin-left: 2vw;
 }
 
 #contact-form {
