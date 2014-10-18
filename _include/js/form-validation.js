@@ -1,13 +1,13 @@
 $(document).ready(function() {
-  var formID = 'ss-form';
-  var formKey = '1xvDWH7xO_mZXskH8yvKeMxR0Ok6nIwwHkhEtC9QwtbI';
-  var labelName = 'ssTestLabel';
-  var testField = 'ssTestValue';
-  var submitted = false;
+  var formID = 'ss-form',
+      formKey = '1xvDWH7xO_mZXskH8yvKeMxR0Ok6nIwwHkhEtC9QwtbI',
+      labelName = 'ssTestLabel',
+      testField = 'ssTestValue',
+      submitted = false,
+      randomInt = Math.floor((Math.random() * 100) + 1);
 
-  var $ssForm = $('#'+formID);
-
-  var randomInt = Math.floor((Math.random() * 100) + 1);
+  var $ssForm = $('#'+formID),
+      $submitButton = $ssForm.find("input[type='submit']");
   $ssForm.find('#'+testField).attr('placeholder', 'Type "' + randomInt + '" here.');
 
   $ssForm.submit(function(evt){
@@ -15,6 +15,13 @@ $(document).ready(function() {
       $ssForm.attr({
         'action': 'https://docs.google.com/forms/d/' + formKey + '/formResponse'
       });
+
+      $submitButton.fadeOut("fast", function() {
+        var successMsg = $("<p>Done. You'll hear from us soon.</p>").hide();
+        $submitButton.replaceWith(successMsg);
+        successMsg.fadeIn("fast");
+      });
+
       return true;
     } else {
       $ssForm.find("#testFail").removeClass('no-viz');
