@@ -741,6 +741,10 @@ p#signup-instructions {
     color: #FFFFFF;
 }
 
+.no-viz {
+  visibility: hidden;
+}
+
 #response {
 	margin-top: 20px;
 	color: #FFFFFF;
