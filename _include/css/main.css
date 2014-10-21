@@ -134,6 +134,14 @@ textarea::-webkit-input-placeholder {
   color: #7F8289;
 }
 
+ul.no-style {
+  list-style: none;
+}
+
+.small-font {
+  font-size: 8px;
+}
+
 p.light-gray {
   color: #B8BABD;
 }
@@ -903,7 +911,6 @@ footer {
 
 footer .credits {
 	color: #FFFFFF;
-	font-size: 13px;
 	margin-bottom: 0;
 	padding: 20px 0;
 	text-transform: uppercase;	
